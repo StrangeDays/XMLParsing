@@ -11,7 +11,7 @@ import Foundation
 extension Data {
     init?(forResource name: String?, withExtension ext: String?) {
         guard let fileURL = Bundle.main.url(forResource: name, withExtension: ext) else { return nil }
-        
+
         do {
             try self.init(contentsOf: fileURL)
         } catch {
